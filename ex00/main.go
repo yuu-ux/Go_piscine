@@ -1,9 +1,7 @@
 package main
 
-// import "fmt"
-import "vendor/ft/ft"
+import "piscine"
 
 func main() {
-	// fmt.Printf("%s\n", "abacde")
-	PrintRune("hello world")
+	piscine.PrintAlphabet()
 }

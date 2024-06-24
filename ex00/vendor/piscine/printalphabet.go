@@ -1,8 +1,10 @@
-package printalphabet
+package piscine
 
-import "ex00/ft/"
+import "ft"
 
-func printalphabet() {
-	r := "abcde"
-	PrintRune(r)
+func PrintAlphabet() {
+	for c:='a'; c <= 'z'; c++ {
+		ft.PrintRune(c)
+	}
+	ft.PrintRune('\n')
 }

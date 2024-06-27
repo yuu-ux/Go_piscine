@@ -5,9 +5,7 @@ import (
 	"piscine"
 )
 func main() {
-	a := 0
-	b := 1
-	piscine.Swap(&a, &b)
-	fmt.Println(a)
-	fmt.Println(b)
+	s := []int{5,4,3,2,1,0}
+	piscine.SortIntegerTable(s)
+	fmt.Println(s)
 }

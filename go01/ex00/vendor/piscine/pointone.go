@@ -1,5 +1,7 @@
 package piscine
 
 func PointOne(nb *int) {
-	*nb = 1
+	if nb != nel {
+		*nb = 1
+	}
 }

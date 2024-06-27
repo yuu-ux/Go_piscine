@@ -4,7 +4,7 @@ import (
 	"piscine"
 )
 func main() {
-	n := 0
+	n := 1
 	piscine.PointOne(&n)
 	fmt.Println(n)
 }

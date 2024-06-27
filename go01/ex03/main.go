@@ -1,9 +1,13 @@
 package main
 
-import "piscine"
-
+import (
+	"fmt"
+	"piscine"
+)
 func main() {
-	piscine.IsNegative(1)
-	piscine.IsNegative(0)
-	piscine.IsNegative(-1)
+	a := 13
+	b := 2
+	piscine.UltimateDivMod(&a, &b)
+	fmt.Println(a)
+	fmt.Println(b)
 }

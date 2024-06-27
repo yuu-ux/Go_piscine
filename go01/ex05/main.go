@@ -1,7 +1,11 @@
 package main
 
-import "piscine"
+import (
+	"fmt"
+	"piscine"
+)
 
 func main() {
-	piscine.PrintComb2()
+	l := piscine.StrLen("Hello World!")
+	fmt.Println(l)
 }

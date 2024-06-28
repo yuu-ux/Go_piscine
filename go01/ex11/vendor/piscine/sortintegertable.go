@@ -1,4 +1,4 @@
-package piscine 
+package piscine
 
 func count(table []int) int {
 	var cnt int = 0

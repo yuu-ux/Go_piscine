@@ -1,7 +1,11 @@
 package main
 
-import "piscine"
+import (
+	"fmt"
+	"piscine"
+)
 
 func main() {
-	piscine.PrintStr("Hello World!")
+	arg1 := 8
+	fmt.Println(piscine.Fibonacci(arg1))
 }

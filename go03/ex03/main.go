@@ -6,5 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.RecursivePower(4, 3))
+	fmt.Println(piscine.Index("Hello!", "l"))
+	fmt.Println(piscine.Index("Salut!", "alu"))
+	fmt.Println(piscine.Index("Ola!", "hOl"))
 }

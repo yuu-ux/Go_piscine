@@ -1,11 +1,23 @@
 package piscine
 
-func RecursiveFactorial(nb int) int {
-	if nb < 0 {
+func StrLen(s string) int {
+        var cnt int
+        for _ = range s {
+                cnt++
+        }
+        return cnt
+}
+
+func NRune(s string, n int) rune {
+	cnt := StrLen(s)
+	index := 0
+
+	if cnt < n || n < 1 {
 		return 0
 	}
-	if nb == 0 {
-		return 1
+
+	for i := 0; i < n; i++ {
+		index++
 	}
-	return nb * RecursiveFactorial(nb-1)
+	return rune(s[index-1])
 }

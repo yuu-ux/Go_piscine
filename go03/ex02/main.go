@@ -1,10 +1,13 @@
 package main
 
 import (
-	"fmt"
+	"ft"
 	"piscine"
 )
 
 func main() {
-	fmt.Println(piscine.IterativePower(4, 3))
+	ft.PrintRune(piscine.LastRune("Hello!"))
+	ft.PrintRune(piscine.LastRune("Salut!"))
+	ft.PrintRune(piscine.LastRune("Ola!"))
+	ft.PrintRune('\n')
 }

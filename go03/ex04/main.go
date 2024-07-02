@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
-	arg1 := 4
-	fmt.Println(piscine.Fibonacci(arg1))
+	fmt.Println(piscine.Compare("Hello!", "Hello!"))
+	fmt.Println(piscine.Compare("Salut!", "lut!"))
+	fmt.Println(piscine.Compare("Ola!", "Ol"))
 }

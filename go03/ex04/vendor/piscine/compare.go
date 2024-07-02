@@ -9,21 +9,35 @@ func StrLen(s string) int {
 }
 
 func Compare(a, b string) int {
-	aLen = StrLen(a)
-	bLen = StrLen(b)
+	aLen := StrLen(a)-1
+	bLen := StrLen(b)-1
 	j := 0
+	i := 0
+	if a == "" && b == "" {
+		return 0
+	} else if a == "" {
+		return -1
+	} else if b == "" {
+		return 1
+	}
 
-	for i := 0; i < aLen; i++ {
-		if a[i] < b[j] {
-			return -1
-		} else if a[i] > b[j] {
-			return 1
+	for i < aLen && j < bLen {
+		if a[i] == b[j] {
+			i++
+			j++
 		} else {
-			for j := 0; j < bLen; j++ {
-						
-			}
-	}	
+			break
+		}
+	}
+	if i == aLen && j == bLen {
+		return 0
+	} else {
+		if a[i] < b[j] || j < bLen {
+			return -1
+		} else if a[i] > b[j] || i < aLen {
+			return 1
+		}
+	}
+	return 0
 }
-// 完全一致したら0を返す
-// s1-s2でマイナスであれば-1を返す
-// s1-s2でプラスであれば1を返す
+

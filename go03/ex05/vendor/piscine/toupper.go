@@ -1,13 +1,17 @@
 package piscine
 
-func ToUpper(s string) string {
-	var result []string
-
-	for _, c := range s {
-		if 'a' <= c && 'z' >= c {
-			result = c - 32
-		}
-	}
-	return s
+func IsLower(c rune) bool {
+	return ('a' <= c && 'z' >= c)
 }
 
+func ToUpper(s string) string {
+	var result string
+
+	for _, c := range s {
+		if IsLower(c) {
+			c -= ('a' - 'A')
+		}
+		result += string(c)
+	}
+	return result
+}

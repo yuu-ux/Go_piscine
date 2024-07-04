@@ -13,21 +13,25 @@ func IsDigit(c rune) bool {
 }
 
 func IsUpperLowerDigit (c rune) bool  {
-	return (IsUpper && IsLower && IsDigit)
+	return (IsUpper(c) || IsLower(c) || IsDigit(c))
 }
 
 func Capitalize(s string) string {
 	var result string
-	flag := true
-	for _, c := range s {
-		if flag == true {
-			flag = false
+	var temp rune = '0'
+
+	for i, c := range s {
+		if i == 0 && IsLower(c) {
 			c -= ('a' - 'A')
 		}
-		if !IsUpperLowerDigit(c) {
-			c -= ('a' - 'A')		
+		if IsUpper(c) && i != 0 {
+			c += ('a' - 'A')
+		}
+		if !IsUpperLowerDigit(temp) && IsLower(c) {
+			c -= ('a' - 'A')
 		}
 		result += string(c)
+		temp = c
 	}
-	
+	return result
 }

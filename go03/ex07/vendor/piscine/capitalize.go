@@ -28,5 +28,6 @@ func Capitalize(s string) string {
 			c -= ('a' - 'A')		
 		}
 		result += string(c)
-	}	
+	}
+	
 }

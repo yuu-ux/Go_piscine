@@ -1,13 +1,18 @@
 package main
 
 import (
+	"os"
 	"ft"
-	"piscine"
 )
 
+func PrintStr(s string) {
+	for _, c := range s {
+		ft.PrintRune(c)
+	}
+}
 func main() {
-	ft.PrintRune(piscine.FirstRune("Hello!"))
-	ft.PrintRune(piscine.FirstRune("Salut!"))
-	ft.PrintRune(piscine.FirstRune("Ola!"))
-	ft.PrintRune('\n')
+	for _, s := range os.Args[1:] {
+		PrintStr(s)
+		ft.PrintRune('\n')
+	}
 }

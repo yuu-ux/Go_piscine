@@ -13,7 +13,7 @@ func Index(s string, toFind string) int {
 	j := 0
 	start := 0
 	sLen := StrLen(s)
-	
+
 	if toFind == "" {
 		return 0
 	}
@@ -27,7 +27,7 @@ func Index(s string, toFind string) int {
 					break
 				}
 				start++
-				j++ 
+				j++
 			}
 		}
 	}

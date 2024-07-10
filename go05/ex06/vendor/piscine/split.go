@@ -35,25 +35,16 @@ func Index(s string, toFind string) int {
 }
 
 func Split(s, sep string) []string {
-	cnt := StrLen(s)
-	var temp string
-	var result []string
-	var index int
-	var i int
-
-	for index+i < cnt {
-		i = 0
-		index = Index(s, sep)
-		if index == -1 {
-			break
-		}
-		for _, c := range []rune(s)[:index] {
-			temp += string(c)
-			i++
-		}
-		result = append(result, temp)
-		temp = ""
-		s = string([]rune(s)[index:])
-	}
-	return result
+    var result []string
+    var start int
+    for {
+        index := Index(s[start:], sep)
+        if index == -1 {
+            result = append(result, s[start:])
+            break
+        }
+        result = append(result, s[start:start+index])
+        start += index + StrLen(sep)
+    }
+    return result
 }
